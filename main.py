@@ -12,11 +12,11 @@ async def on_ready():
     print(f"{bot.user} is ready and online!")
 
 cogs_list = [
-    'hello',
-    'help'
+    "hello",
+    "help"
 ]
 
 for cog in cogs_list:
-    bot.load_extension(f'cogs.{cog}')
+    bot.load_extension(f"cogs.{cog}")
 
-bot.run(os.getenv('TOKEN'))
+bot.run(os.getenv("TOKEN"))

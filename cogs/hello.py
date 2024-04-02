@@ -5,9 +5,9 @@ class Hello(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @discord.slash_command(name = 'hello', description = 'Say hello')
+    @discord.slash_command(name = "hello", description = "Say hello")
     async def hello(self, ctx):
-        await ctx.respond('Hello!')
+        await ctx.respond("Hello!")
 
 def setup(bot):
     bot.add_cog(Hello(bot))
