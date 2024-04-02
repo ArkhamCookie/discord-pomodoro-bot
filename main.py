@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import discord
-from discord.ext.pages import Paginator, Page
 
 import os
 from dotenv import load_dotenv
