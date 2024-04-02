@@ -6,12 +6,12 @@ class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @discord.slash_command(name = "help", description = "Display the help message")
+    @discord.slash_command(name = "help", description = "Display the help menu")
     async def help(self, ctx):
         pages = [
             Page(embeds=[discord.Embed(
                 title="Help",
-                description="Use `/help` to display this message",
+                description="Use `/help` to display this menu",
                 color=discord.Color.blurple()
             )]),
             Page(embeds=[discord.Embed(
