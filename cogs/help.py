@@ -9,14 +9,21 @@ class Help(commands.Cog):
     @discord.slash_command(name = "help", description = "Display the help message")
     async def help(self, ctx):
         pages = [
-            Page(embeds=[discord.Embed(title="Help", color=discord.Color.yellow())]),
-            Page(content="Use `/help` to display this message")
+            Page(embeds=[discord.Embed(
+                title="Help",
+                description="Use `/help` to display this message",
+                color=discord.Color.blurple()
+            )]),
+            Page(embeds=[discord.Embed(
+                title="Foo",
+                description="Description",
+                color=discord.Color.blurple()
+            )])
         ]
         paginator = Paginator(pages=pages, author_check=True, disable_on_timeout=False)
         paginator.remove_button("first")
         paginator.remove_button("last")
 
-        # await ctx.respond("Use `/help` to display this message")
         await paginator.respond(ctx.interaction)
 
 def setup(bot):
