@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import discord
-
 import os
 from dotenv import load_dotenv
 
@@ -13,7 +12,8 @@ async def on_ready():
     print(f"{bot.user} is ready and online!")
 
 cogs_list = [
-    'hello'
+    'hello',
+    'help'
 ]
 
 for cog in cogs_list:
