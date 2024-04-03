@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import time
 import asyncio
 
 class Start(commands.Cog):
@@ -19,7 +18,7 @@ class Start(commands.Cog):
         await ctx.respond(f"{ctx.author.mention}, starting **{session}** session now, {work_time} minutes until your next break.")
 
         while repetitions >= 0:
-            time.sleep(work_time * 60)
+            await asyncio.sleep(work_time * 60)
 
             if repetitions == 0:
                 await ctx.respond(f"{ctx.author.mention}, all done!")
@@ -27,7 +26,7 @@ class Start(commands.Cog):
 
             repetitions -= 1
             await ctx.respond(f"{ctx.author.mention}, take a break for {break_time} minutes")
-            time.sleep(break_time * 60)
+            await asyncio.sleep(break_time * 60)
             await ctx.respond(f"{ctx.author.mention}, break time is over.  {repetitions + 1} cycle(s) left.")
 
 def setup(bot):
