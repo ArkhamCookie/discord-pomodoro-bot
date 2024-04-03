@@ -10,7 +10,7 @@ class Start(commands.Cog):
     async def start(
         self,
         ctx,
-        session: discord.Option(str),
+        session: discord.Option(str, "Session Title"),
         repetitions: discord.Option(int, "Cycles to do"),
         work_time: discord.Option(int, "Time to work for") = 25,
         break_time: discord.Option(int, "Time to break for") = 5
