@@ -22,7 +22,7 @@ class Start(commands.Cog):
             time.sleep(work_time * 60)
 
             if repetitions == 0:
-                await ctx.respond("All done!")
+                await ctx.respond(f"{ctx.author.mention}, all done!")
                 break
 
             repetitions -= 1
