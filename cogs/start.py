@@ -15,7 +15,6 @@ class Start(commands.Cog):
         work_time: discord.Option(int),
         break_time: discord.Option(int),
         repetitions: discord.Option(int)
-
     ):
         await ctx.respond(f"Starting **{session}** session now, {work_time} minutes until your first break.")
 
