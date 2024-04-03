@@ -11,10 +11,9 @@ class Start(commands.Cog):
         self,
         ctx,
         session: discord.Option(str),
-        # TODO: Make time options optional with defaults
-        work_time: discord.Option(int),
-        break_time: discord.Option(int),
-        repetitions: discord.Option(int)
+        repetitions: discord.Option(int, "Cycles to do"),
+        work_time: discord.Option(int, "Time to work for") = 25,
+        break_time: discord.Option(int, "Time to break for") = 5
     ):
         await ctx.respond(f"Starting **{session}** session now, {work_time} minutes until your first break.")
 
