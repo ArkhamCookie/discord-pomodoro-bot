@@ -17,20 +17,19 @@ class Start(commands.Cog):
         repetitions: discord.Option(int)
 
     ):
-        await ctx.respond(f"Starting now, {work_time} minutes until your first break.")
+        await ctx.respond(f"Starting **{session}** session now, {work_time} minutes until your first break.")
 
         while repetitions >= 0:
             time.sleep(work_time * 60)
-            repetitions -= 1
 
             if repetitions == 0:
-                print("All done!")
-                # Something to end the command
-            print(f"{repetitions + 1} cycle left.")
+                await ctx.respond("All done!")
+                break
 
-            print(f"Take a break for {break_time} minutes")
+            repetitions -= 1
+            await ctx.respond(f"Take a break for {break_time} minutes")
             time.sleep(break_time * 60)
-            print("The break is over.")
+            await ctx.respond(f"Break time is over.  {repetitions + 1} cycle(s) left.")
 
 def setup(bot):
     bot.add_cog(Start(bot))
