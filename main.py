@@ -13,7 +13,6 @@ async def on_ready():
 
 cogs_list = [
     "start",
-    "hello",
     "help"
 ]
 
