@@ -12,6 +12,7 @@ async def on_ready():
     print(f"{bot.user} is ready and online!")
 
 cogs_list = [
+    "start",
     "hello",
     "help"
 ]
