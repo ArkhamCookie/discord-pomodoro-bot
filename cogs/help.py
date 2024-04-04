@@ -16,7 +16,7 @@ class Help(commands.Cog):
             )]),
             Page(embeds=[discord.Embed(
                 title="Start Pomodoro Timer",
-                description="`/start <session> <repetitions> [work_time] [break_time]`\n**Note:** Currently, only 1 session can be going at a time.",
+                description="`/start <session> <repetitions> [work_time] [break_time]`",
                 color=discord.Color.blurple()
             )])
         ]
