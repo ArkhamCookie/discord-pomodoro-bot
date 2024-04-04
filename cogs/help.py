@@ -20,7 +20,7 @@ class Help(commands.Cog):
                 color=discord.Color.blurple()
             )])
         ]
-        paginator = Paginator(pages=pages, author_check=True, disable_on_timeout=False)
+        paginator = Paginator(pages=pages, author_check=True)
         paginator.remove_button("first")
         paginator.remove_button("last")
 
