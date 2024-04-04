@@ -16,11 +16,11 @@ class Help(commands.Cog):
             )]),
             Page(embeds=[discord.Embed(
                 title="Start Pomodoro Timer",
-                description="`/start <session> <work_time> <break_time> <repetitions>`\n**Note:** Currently, only 1 session can be going at a time.",
+                description="`/start <session> <repetitions> [work_time] [break_time]`\n**Note:** Currently, only 1 session can be going at a time.",
                 color=discord.Color.blurple()
             )])
         ]
-        paginator = Paginator(pages=pages, author_check=True, disable_on_timeout=False)
+        paginator = Paginator(pages=pages, author_check=True)
         paginator.remove_button("first")
         paginator.remove_button("last")
 
